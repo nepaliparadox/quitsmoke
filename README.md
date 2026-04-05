@@ -21,7 +21,7 @@ No excuses allowed. Just progress.
 
 | Dashboard | Addiction Log | Settings |
 | :---: | :---: | :---: |
-| _screen1.png_ | _screen2.png_ | _screen3.png_ |
+| screen1.png | screen2.png | screen3.png |
 
 ---
 
