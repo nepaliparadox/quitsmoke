@@ -1,4 +1,6 @@
 
+![](./assets/images/icon.png)
+
 
 # 🚭 QuitSmoke
 
