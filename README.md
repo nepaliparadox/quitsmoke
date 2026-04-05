@@ -1,50 +1,87 @@
-# Welcome to your Expo app 👋
+# 🚭 QuitSmoke
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**QuitSmoke** is a premium, no-nonsense quit-smoking companion built with **React Native (Expo)**. It's designed for those who want real data, real analytics, and a bit of tough love to keep them on the smoke-free path. 
 
-## Get started
+No excuses allowed. Just progress.
 
-1. Install dependencies
+---
 
+## ✨ Key Features
+
+*   **⏱️ Live Journey Tracker**: Watch every second of your smoke-free life tick away in real-time.
+*   **🩺 Health Analytics**: Live visualization of your biological recovery, including Oxygen levels, Blood Pressure, and Carbon Monoxide clearance.
+*   **💰 Financial Statistics**: Real-time tracking of money saved and life minutes regained.
+*   **📉 Addiction Logging**: Honest tracking of slip-ups and triggers to help you understand your habits.
+*   **🎨 Premium Theming**: Fully responsive design with **Forest Green** aesthetics, supporting Light, Dark, and System theme modes.
+*   **💀 The Looser Filter**: Attempting to reset your data? You'll have to admit defeat out loud first.
+
+---
+
+## 📸 Screenshots
+
+| Dashboard | Addiction Log | Settings |
+| :---: | :---: | :---: |
+| _screen1.png_ | _screen2.png_ | _screen3.png_ |
+
+---
+
+## 🛠️ Tech Stack
+
+*   **Framework**: [Expo](https://expo.dev/) (React Native)
+*   **Navigation**: Expo Router (File-based routing)
+*   **Icons**: [Lucide React Native](https://lucide.dev/guide/packages/lucide-react-native)
+*   **State Management**: Context API
+*   **Storage**: AsyncStorage (Offline-first)
+*   **Build System**: EAS (Expo Application Services)
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally, you'll need [Node.js](https://nodejs.org/) and the [Expo Go](https://expo.dev/go) app on your device.
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/nepaliparadox/quitsmoke.git
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Open the app**
+   Scan the QR code with your Expo Go app (Android) or Camera app (iOS).
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📦 Building an APK
 
-## Get a fresh project
-
-When you're ready, run:
+To generate a standalone APK for sharing:
 
 ```bash
-npm run reset-project
+npx eas build -p android --profile preview
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## ⚖️ License
 
-To learn more about developing your project with Expo, look at the following resources:
+Distributed under the **GNU General Public License v3.0**. See `LICENSE` for more information.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🤝 Contact
 
-Join our community of developers creating universal apps.
+**Nepaliparadox** - [github.com/nepaliparadox](https://github.com/nepaliparadox)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Project Link: [https://github.com/nepaliparadox/quitsmoke](https://github.com/nepaliparadox/quitsmoke)
+
+---
+
+### 🔥 If you find this project helpful, give it a ⭐️!

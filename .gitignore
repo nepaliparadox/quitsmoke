@@ -41,3 +41,10 @@ app-example
 # generated native folders
 /ios
 /android
+
+# personal IDE settings
+.idea/
+
+# build artifacts
+*.apk
+*.aab
