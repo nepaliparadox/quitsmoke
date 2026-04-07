@@ -1,3 +1,7 @@
+
+![](./assets/images/icon.png)
+
+
 # 🚭 QuitSmoke
 
 **QuitSmoke** is a premium, no-nonsense quit-smoking companion built with **React Native (Expo)**. It's designed for those who want real data, real analytics, and a bit of tough love to keep them on the smoke-free path. 
@@ -18,10 +22,9 @@ No excuses allowed. Just progress.
 ---
 
 ## 📸 Screenshots
-
 | Dashboard | Addiction Log | Settings |
 | :---: | :---: | :---: |
-| _screen1.png_ | _screen2.png_ | _screen3.png_ |
+| ![Dashboard](./Screenshot/screen1.png) | ![Log](./Screenshot/screen2.png) | ![Settings](./Screenshot/screen3.png) |
 
 ---
 
