@@ -94,9 +94,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       date: new Date().toISOString(),
       why,
     };
+
+    // Calculate how much time 1 cigarette represents based on user settings.
+    // e.g. if user smokes 10 cigs/day → 1 cig = 144 minutes = 8,640,000 ms
+    const msPerCigarette = (24 * 60 * 60 * 1000) / userData.cigsPerDay;
+
+    // Shift the quit date forward by exactly 1 cigarette's worth of time to REDUCE progress.
+    // This deducts the equivalent time, money, and health progress for 1 cig
+    // WITHOUT resetting the entire counter to zero.
+    // We cap it at Date.now() so the user doesn't fall into negative overall progress.
+    const currentQuitDate = new Date(userData.quitDate).getTime();
+    const shiftedDate = currentQuitDate + msPerCigarette;
+    const newQuitDate = new Date(Math.min(Date.now(), shiftedDate)).toISOString();
+
     const newData: UserData = {
       ...userData,
-      quitDate: new Date().toISOString(), // Reset quit date
+      quitDate: newQuitDate,
       logs: [newLog, ...userData.logs],
     };
     saveData(newData);
