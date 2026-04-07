@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { View } from 'react-native';
-import { LayoutDashboard, Settings as SettingsIcon, SquarePlus } from 'lucide-react-native';
+import { LayoutDashboard, Settings as SettingsIcon, SquarePlus, TrendingUp } from 'lucide-react-native';
 import { HapticTab } from '@/components/haptic-tab';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -42,6 +42,13 @@ export default function TabLayout() {
         options={{
           title: 'Log',
           tabBarIcon: ({ color }) => <SquarePlus size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="analytics"
+        options={{
+          title: 'Analytics',
+          tabBarIcon: ({ color }) => <TrendingUp size={24} color={color} />,
         }}
       />
       <Tabs.Screen
