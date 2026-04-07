@@ -17,6 +17,7 @@ export type UserData = {
   theme: 'light' | 'dark' | 'system';
   savingGoal: number;
   logs: LogEntry[];
+  onboarded: boolean;
 };
 
 const DEFAULT_USER_DATA: UserData = {
@@ -28,6 +29,7 @@ const DEFAULT_USER_DATA: UserData = {
   theme: 'system',
   savingGoal: 100,
   logs: [],
+  onboarded: false,
 };
 
 const STORAGE_KEY = 'QUIT_SMOKING_DATA';

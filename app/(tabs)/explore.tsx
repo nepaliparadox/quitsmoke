@@ -130,9 +130,12 @@ export default function SettingsScreen() {
 
         <View style={styles.footer}>
           <ThemedText style={styles.footerText}>
-            {Constants.expoConfig?.name} v{Constants.expoConfig?.version}
+            QuitSmoke v{Constants.expoConfig?.version || '1.0.0'}
           </ThemedText>
-          <TouchableOpacity onPress={() => Linking.openURL('https://github.com/nepaliparadox/quitsmoke')}>
+          <TouchableOpacity 
+            style={{ width: '100%', alignItems: 'center' }}
+            onPress={() => Linking.openURL('https://github.com/nepaliparadox/quitsmoke')}
+          >
             <ThemedText style={[styles.footerText, { color: Colors[colorScheme].tint, marginTop: 5, textDecorationLine: 'underline' }]}>
               github.com/nepaliparadox/quitsmoke
             </ThemedText>
@@ -408,5 +411,6 @@ const styles = StyleSheet.create({
   footerText: {
     fontSize: 12,
     opacity: 0.3,
+    textAlign: 'center',
   }
 });

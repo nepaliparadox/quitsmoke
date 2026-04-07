@@ -1,10 +1,11 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { AppProvider, useApp } from '@/context/AppContext';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Colors } from '@/constants/theme';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useEffect } from 'react';
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -13,6 +14,20 @@ export const unstable_settings = {
 function RootLayoutInner() {
   const { userData, isLoading } = useApp();
   const systemColorScheme = useColorScheme();
+  const router = useRouter();
+  const segments = useSegments();
+
+  useEffect(() => {
+    if (isLoading) return;
+
+    const isOnOnboarding = segments[0] === 'onboarding';
+
+    if (!userData.onboarded && !isOnOnboarding) {
+      router.replace('/onboarding');
+    } else if (userData.onboarded && isOnOnboarding) {
+      router.replace('/(tabs)');
+    }
+  }, [userData.onboarded, isLoading, segments]);
 
   if (isLoading) return null;
   
@@ -46,9 +61,10 @@ function RootLayoutInner() {
 
   return (
     <ThemeProvider value={isDark ? CustomDarkTheme : CustomLightTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Quit Smoking Setup' }} />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="onboarding" />
+        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
       </Stack>
       <StatusBar style={isDark ? 'light' : 'dark'} />
     </ThemeProvider>
